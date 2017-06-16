@@ -1,0 +1,174 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Checkout Form</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <link href="//www.google-analytics.com" rel="dns-prefetch">
+    <link href="//ajax.googleapis.com" rel="dns-prefetch">
+    <link href="assets/css/style.min.css" rel="stylesheet">
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
+    <script src="assets/components/modernizr/modernizr.js"></script>
+  </head>
+  <body>
+
+    <main class="main" role="main">
+      <div class="container">
+        <div class="stepwizard col-xs-12 col-md-8 col-md-offset-2">
+          <div class="stepwizard-row setup-panel">
+            <div class="stepwizard-step">
+              <p>01 Customer Info</p>
+            </div>
+            <div class="stepwizard-step">
+              <p>02 Shipping Info</p>
+            </div>
+            <div class="stepwizard-step">
+              <p>03 Payment Selection</p>
+            </div>
+          </div>
+        </div>
+
+        <form id="form" role="form" action="#" method="post">
+          <div class="row setup-content" id="step-1">
+            <div class="col-xs-12 col-sm-12 col-md-8  col-md-offset-2">
+              <h3>Customer information</h3>
+              <div class="row">
+                <div class="form-group col-sm-6">
+                  <label class="control-label">First Name</label>
+                  <input name="name"  maxlength="100" type="text" required="required" class="form-control" />
+                </div>
+                <div class="form-group col-sm-6">
+                  <label class="control-label">Last Name</label>
+                  <input maxlength="100" type="text" class="form-control"/>
+                </div>
+                <div class="form-group col-sm-12">
+                  <label class="control-label">Address</label>
+                  <input maxlength="100" type="text" class="form-control"/>
+                </div>
+                <div class="form-group col-sm-6">
+                  <label class="control-label">Country</label>
+                  <input type="text"  id="country" class="form-control">
+                </div>
+                <div class="form-group col-sm-6">
+                  <label class="control-label">City</label>
+                  <input  maxlength="100" type="text" class="form-control" value="Kryviy Rig"/>
+                </div>
+                <div class="form-group col-sm-6">
+                  <div class="input-group">
+                    <label class="control-label">Postal Code</label>
+                    <input type="text" class="form-control">
+                    <span class="input-group-btn">
+                  <button class="btn btn-default" type="button">Find</button>
+                  </span>
+                  </div>
+                </div>
+                <div class="form-group col-sm-6">
+                  <label class="control-label">Phone</label>
+                  <input type="tel" class="form-control" required="required" id="phone" placeholder="+3 8(0__)___-__-__">
+                </div>
+                <div class="col-xs-12 col-md-12 btn--block">
+                  <button class="btn nextBtn btn-lg pull-right" type="button" disabled="disabled">Continue to shipping</button>
+                  <a class="prevBtn--style" href="#">Return to shop</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row setup-content step-2" id="step-2">
+            <div class="col-sm-12 col-md-8 col-md-offset-2">
+              <div class="row">
+                <h3>Shipping information</h3>
+                <div class="wrap--map--block">
+                  <div class="map--block">
+                    <p>Taras Shevchenko</p>
+                    <p>Unit 2 Green Mount Park</p>
+                    <p>Halifax</p>
+                    <p>HX1 5QN</p>
+                    <p>Phone: +3 8097 132-45-67</p>
+                    <span><a href="#">Edit Address</a></span>
+                    <span><a href="#">Add New</a></span>
+                  </div>
+                  <div class="map--block">
+                    <div id="map"></div>
+                  </div>
+                </div>
+                <h3>Shipping Method</h3>
+                <div class="wrap--shipping--block">
+                  <div class="shipping--block">
+                    <span><input name="radio" type="radio" name="order" checked="checked"><label>Standard Delivery</label>  <strong>Free</strong></span>
+                    <p>Freebie checkout form of the third step in sketchapp. Fell free to download and use it for your project.</p>
+                  </div>
+                  <div class="shipping--block">
+                    <span><input name="radio" type="radio" name="order"><label>Fast Delivery</label>  <strong>8.00 uah</strong></span>
+                    <p>Freebie checkout form of the third step in sketchapp. Fell free to download and use it for your project.</p>
+                  </div>
+                </div>
+                <div class="col-md-12 btn--block">
+                  <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Continue to payment</button>
+                  <a class="prevBtn prevBtn--style" href="#step-1">Back to Customer info</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row setup-content" id="step-3">
+            <div class="col-sm-12 col-md-8 col-md-offset-2">
+              <h3>Payment information</h3>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="payment--img img--position-1"><label><input type="radio" name="payment"></label></div>
+                  <div class="payment--img img--position-2"><label><input type="radio" name="payment"></label></div>
+                  <div class="payment--img img--position-3"><label><input type="radio" name="payment"></label></div>
+                  <div class="payment--img img--position-4"><label><input type="radio" name="payment"></label></div>
+                </div>
+                <div class="col-md-12 btn--block">
+                  <button class="btn btn-success btn-lg pull-right" type="submit">Submit</button>
+                  <a class="prevBtn prevBtn--style" href="#step-2">Back to Shipping info</a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <script src="assets/components/jquery/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js"></script>
+    <script src="assets/js/scripts.min.js"></script>
+
+    <script>
+
+        // GOOGLE MAP INIT
+        function initMap() {
+          var uluru = {lat: -25.363, lng: 131.044};
+          var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 4,
+            center: uluru,
+            zoomControl: true,
+            mapTypeControl: false,
+            scaleControl: true,
+            streetViewControl: false,
+            rotateControl: false,
+            fullscreenControl: false
+          });
+          var marker = new google.maps.Marker({
+            position: uluru,
+            map: map
+          });
+        }
+
+        // COUNTRY SELECT PLUGIN INIT
+        $("#country").countrySelect();
+
+    </script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgzPh5PPXPgSgkYYXgG2NphNz7MLEdDxk&callback=initMap">
+    </script>
+  </body>
+</html>
